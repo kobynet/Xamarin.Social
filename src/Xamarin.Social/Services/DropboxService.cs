@@ -82,7 +82,7 @@ namespace Xamarin.Social.Services
 
 			public override bool OnPageLoading (Uri url)
 			{
-				if (Embedded && url.Host == callbackUrl.Host && url.AbsolutePath == callbackUrl.AbsolutePath) {
+				if (Embedded && url.Host == CallbackUrl.Host && url.AbsolutePath == CallbackUrl.AbsolutePath) {
 					GetAccessTokenAsync ().ContinueWith (getTokenTask => {
 						if (getTokenTask.IsCanceled) {
 							OnCancelled ();
